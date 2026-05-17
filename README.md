@@ -303,70 +303,6 @@ Regular feed-forward networks flatten images completely and lose spatial structu
 
 ---
 
-# Task 7: Business Use Case Mapping
-
-## Real-World Use Case: Healthcare
-
-CNN-based image classification systems are widely used in healthcare.
-
-Examples:
-
-- Detecting pneumonia from chest X-rays
-- Brain tumor detection using MRI scans
-- Skin disease classification
-- Diabetic retinopathy detection
-
----
-
-## Benefits
-
-- Faster diagnosis
-- Improved accuracy
-- Reduced manual workload
-- Early disease detection
-- Better patient support
-
-This demonstrates how computer vision solutions can improve healthcare systems.
-
----
-
-## Task 6: CNN Concept Explanation
-
-### What is convolution?
-Convolution is the core operation of a CNN. A small filter (e.g. 3×3) slides across the entire
-image, computing a weighted sum of pixel values at each position. This produces a feature map
-that highlights where specific patterns appear in the image — one filter might detect horizontal
-edges, another vertical edges, another detect a specific colour transition. During training,
-the network learns which filters best distinguish the classes, without being told what to look for.
-
-### Why is pooling used?
-Max pooling reduces the spatial size of feature maps by keeping only the maximum value in each
-small region (e.g. 2×2). This achieves two things:
-1. Dimensionality reduction — fewer parameters and faster computation in subsequent layers.
-2. Spatial invariance — the model becomes less sensitive to the exact position of a feature.
-   A scratch 2 pixels to the left is still detected as a scratch.
-
-### Why is ReLU commonly used in CNNs?
-ReLU (`max(0, z)`) is the standard activation for hidden layers in CNNs for three reasons:
-1. No vanishing gradient — unlike sigmoid or tanh, it does not saturate for positive inputs,
-   so gradients flow freely through deep networks during backpropagation.
-2. Sparsity — neurons with negative inputs output zero, making activations sparse and efficient.
-3. Computational simplicity — a single threshold operation, extremely fast at scale.
-
-### Why are CNNs better than regular feed-forward networks for image data?
-A standard feed-forward network treats each pixel as an independent input. A 128×128 RGB image
-has 49,152 inputs — connecting to just 256 neurons already means ~12 million parameters,
-and the network has no notion that neighbouring pixels are related.
-
-CNNs solve both problems through three key properties:
-- Local connectivity — each neuron only sees a small patch (e.g. 3×3), preserving spatial structure.
-- Weight sharing — the same filter is applied across the entire image, reducing parameters
-  from millions to just the filter weights (e.g. 3×3×3 = 27 per filter).
-- Translation invariance — a dent in the top-left and bottom-right activate the same filters,
-  so the model generalises across positions automatically.
-
----
-
 ## Task 7: Business Use Case Mapping
 
 ### Domain: Manufacturing – Automotive Quality Control
@@ -421,8 +357,26 @@ part-2-cnn-computer-vision/
 ```
 ---
 
-## Results
+## Technologies Used
+- Python
+- TensorFlow
+- Keras
+- OpenCV
+- NumPy
+- Pandas
+- Matplotlib
+- Seaborn
+- Scikit-learn
 
-- Accuracy and Loss Curves
-- Confusion Matrix
-- Sample Prediction Outputs
+## Result
+This project successfully demonstrates how Convolutional Neural Networks (CNNs) can solve image classification problems.
+The project includes:
+- Dataset preprocessing
+- CNN architecture creation
+- Model training
+- Evaluation
+- Visualization
+- Concept explanation
+- Business use case mapping
+
+The final model successfully learns visual patterns from images using convolution, pooling, activation functions, and dense layers.
