@@ -43,13 +43,13 @@ Therefore, image classification is the correct computer vision formulation.
 
 ---
 
-# Task 2: Dataset Exploration
+## Task 2: Dataset Exploration
 
-## Dataset Analysis
+### Dataset Analysis
 
 The dataset was explored using Python utilities and visualization libraries.
 
-### Analysis Performed
+#### Analysis Performed
 
 - Total number of classes
 - Number of images per class
@@ -59,7 +59,7 @@ The dataset was explored using Python utilities and visualization libraries.
 
 ---
 
-## Dataset Statistics
+### Dataset Statistics
 
 | Class Name | Number of Images |
 |---|---|
@@ -67,7 +67,7 @@ The dataset was explored using Python utilities and visualization libraries.
 
 ---
 
-## Observations
+### Observations
 
 - Images belong to multiple categories.
 - Some classes may contain more images than others.
@@ -77,11 +77,11 @@ The dataset was explored using Python utilities and visualization libraries.
 
 ---
 
-# Task 3: Image Preprocessing
+## Task 3: Image Preprocessing
 
-## Preprocessing Steps
+### Preprocessing Steps
 
-### 1. Image Resizing
+#### 1. Image Resizing
 
 All images were resized to:
 
@@ -93,7 +93,7 @@ This ensures that every image has the same dimensions before being passed into t
 
 ---
 
-### 2. Pixel Normalization
+#### 2. Pixel Normalization
 
 Pixel values were normalized from:
 
@@ -105,7 +105,7 @@ This improves training stability and convergence.
 
 ---
 
-### 3. Dataset Splitting
+#### 3. Dataset Splitting
 
 The dataset was divided into:
 
@@ -117,7 +117,7 @@ The dataset was divided into:
 
 ---
 
-### 4. Data Augmentation
+#### 4. Data Augmentation
 
 To improve generalization and reduce overfitting, augmentation techniques were applied:
 
@@ -129,9 +129,9 @@ To improve generalization and reduce overfitting, augmentation techniques were a
 
 ---
 
-# Task 4: CNN Model Creation
+## Task 4: CNN Model Creation
 
-## CNN Architecture
+### CNN Architecture
 
 The CNN model contains:
 
@@ -145,7 +145,7 @@ The CNN model contains:
 
 ---
 
-## Model Architecture
+### Model Architecture
 
 ```python
 model = Sequential([
@@ -173,9 +173,9 @@ model = Sequential([
 
 ---
 
-# Task 5: Model Training and Evaluation
+## Task 5: Model Training and Evaluation
 
-## Training Configuration
+### Training Configuration
 
 | Parameter | Value |
 |---|---|
@@ -187,19 +187,19 @@ model = Sequential([
 
 ---
 
-## Callbacks Used
+### Callbacks Used
 
-### EarlyStopping
+#### EarlyStopping
 
 Stops training when validation loss stops improving.
 
-### ModelCheckpoint
+#### ModelCheckpoint
 
 Automatically saves the best-performing model.
 
 ---
 
-## Evaluation Metrics
+### Evaluation Metrics
 
 The following metrics were used:
 
@@ -214,7 +214,7 @@ The following metrics were used:
 
 ---
 
-## Accuracy and Loss Curves
+### Accuracy and Loss Curves
 
 These graphs show:
 
@@ -225,7 +225,7 @@ These graphs show:
 
 ---
 
-## Confusion Matrix
+### Confusion Matrix
 
 The confusion matrix helps evaluate:
 
@@ -235,7 +235,7 @@ The confusion matrix helps evaluate:
 
 ---
 
-## Sample Predictions
+### Sample Predictions
 
 The output image visualizes:
 
@@ -245,9 +245,9 @@ The output image visualizes:
 
 ---
 
-# Task 6: CNN Concept Explanation
+## Task 6: CNN Concept Explanation
 
-## What is Convolution?
+### What is Convolution?
 
 Convolution is a mathematical operation where a small filter/kernel slides across the image to detect important visual features such as:
 
@@ -260,7 +260,7 @@ CNNs automatically learn these filters during training.
 
 ---
 
-## Why is Pooling Used?
+### Why is Pooling Used?
 
 Pooling reduces the spatial dimensions of feature maps.
 
@@ -275,7 +275,7 @@ MaxPooling selects the most important value from a region.
 
 ---
 
-## Why is ReLU Commonly Used?
+### Why is ReLU Commonly Used?
 
 ReLU (Rectified Linear Unit) introduces non-linearity into the network.
 
@@ -289,7 +289,7 @@ Advantages:
 
 ---
 
-## Why are CNNs Better Than Regular Feed-Forward Networks for Images?
+### Why are CNNs Better Than Regular Feed-Forward Networks for Images?
 
 CNNs are better because they:
 
@@ -380,3 +380,6 @@ The project includes:
 - Business use case mapping
 
 The final model successfully learns visual patterns from images using convolution, pooling, activation functions, and dense layers.
+
+## Author
+Prerana Gautam Shukla
